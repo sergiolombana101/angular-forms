@@ -5,7 +5,7 @@ import { NgForm } from '@angular/forms';
   selector: 'show-model-error', 
   inputs: ['controlPath: control', 'errorTypes: errors'],
   template: `
-    <div class="alert alert-danger" *ng-if="errorMessage !== null">{{errorMessage}}</div>
+    <div class="alert alert-danger" *ngIf="errorMessage !== null">{{errorMessage}}</div>
   `
 })
 //This class requires NgFormModel to be injected versus NgForm (as in show-error.component.ts)

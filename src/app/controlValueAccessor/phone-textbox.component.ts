@@ -17,9 +17,9 @@ import { ValidationErrors } from "@angular/forms/src/directives/validators";
     ]
 })
 export class PhoneTextboxComponent implements ControlValueAccessor {
-    private onChange = (_: any) => { };
-    private onTouched = (_: any) => { };
-    private onValidate = (_: any) => { };
+    onChange = (_: any) => { };
+    onTouched = (_: any) => { };
+    onValidate = (_: any) => { };
     value: string;
     disabled = false;
 

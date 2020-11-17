@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
   selector: 'show-error', 
   inputs: ['controlPath: control', 'errorTypes: errors'],
   template: `
-    <div class="alert alert-danger" *ng-if="errorMessage !== null">{{errorMessage}}</div>
+    <div class="alert alert-danger" *ngIf="errorMessage !== null">{{errorMessage}}</div>
   `
 })
 export class ShowError {

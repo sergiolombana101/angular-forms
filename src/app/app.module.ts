@@ -8,9 +8,11 @@ import { RequiredTextboxComponent } from './controlValueAccessor/required-textbo
 import { PhoneTextboxComponent } from './controlValueAccessor/phone-textbox.component';
 import { CamelToTitlePipe } from './shared/camel-to-title.pipe';
 
+import { ShowError } from './shared/showError.component';
+import { ShowModelError } from './shared/showModelError.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, AppRoutingModule.components, RequiredTextboxComponent, PhoneTextboxComponent, CamelToTitlePipe ],
+  declarations: [ AppComponent, AppRoutingModule.components, RequiredTextboxComponent, PhoneTextboxComponent, CamelToTitlePipe, ShowError,ShowModelError],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -15,8 +15,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, AbstractControl, Validators, N
     ]
 })
 export class RequiredTextboxComponent implements ControlValueAccessor {
-    private onChange = (_: any) => { };
-    private onTouched = (_: any) => { };
+    onChange = (_: any) => { };
+   onTouched = (_: any) => { };
     value: string;
     disabled = false;
 
