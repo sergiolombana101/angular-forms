@@ -1,20 +1,145 @@
 <h1>Customer Edit</h1>
 <form #starterForm="ngForm" (ngSubmit)="onSubmit()">
-    First Name: <input type="text" class="form-control"
-                       name="firstName" 
-                       #firstName="ngModel"
-                       [(ngModel)]="customer.firstName"
-                       required />
-    <br />
-    <span *ngIf="!firstName.valid">First Name is required!</span>
-    <br />
-    <button class="btn btn-default" [disabled]="!starterForm.valid">Submit</button>
-    <br /><br />
-    {{ message }}
-    <br />
-    Valid: {{ firstName.valid}}
-    <br />
-    Pristine: {{ firstName.pristine }}
-    <br />
-    Touched: {{ firstName.touched }}
+  First Name:
+  <input
+    type="text"
+    class="form-control"
+    name="firstName"
+    #firstName="ngModel"
+    [(ngModel)]="customer.firstName"
+    required
+  />
+  <br />
+  Last Name:
+  <input
+    type="text"
+    class="form-control"
+    name="lastName"
+    #lastName="ngModel"
+    [(ngModel)]="customer.lastName"
+    required
+  />
+  <br />
+  Address:
+  <input
+    type="text"
+    class="form-control"
+    name="address"
+    #address="ngModel"
+    [(ngModel)]="customer.address"
+    required
+  />
+  <br />
+  City:
+  <input
+    type="text"
+    class="form-control"
+    name="city"
+    #city="ngModel"
+    [(ngModel)]="customer.city"
+    required
+  />
+  <br />
+  Province:
+  <input
+    type="text"
+    class="form-control"
+    name="province"
+    #province="ngModel"
+    [(ngModel)]="customer.province"
+    required
+  />
+  <br />
+  Country:
+  <input
+    type="text"
+    class="form-control"
+    name="country"
+    #country="ngModel"
+    [(ngModel)]="customer.country"
+    required
+  />
+  <br />
+  Postal Code:
+  <input
+    type="text"
+    class="form-control"
+    name="postalCode"
+    #postalCode="ngModel"
+    [(ngModel)]="customer.postalCode"
+    required
+  />
+  <br />
+  Phone Number:
+  <input
+    type="text"
+    class="form-control"
+    name="phoneNumber"
+    #phoneNumber="ngModel"
+    [(ngModel)]="customer.phoneNumber"
+    required
+  />
+  <br />
+  Email:
+  <input
+    type="text"
+    class="form-control"
+    name="email"
+    #email="ngModel"
+    [(ngModel)]="customer.email"
+    required
+  />
+  <br />
+
+  <span *ngIf="!firstName.valid">First Name is required!</span>
+  <br />
+  <button class="btn btn-default" [disabled]="!starterForm.valid">
+    Submit
+  </button>
+  <br /><br />
+  <div *ngIf="submitted" style="margin-top: 5%">
+    <div style="display: flex">
+      <p style="font-weight: bold">First Name:</p>
+      <p>{{ customer.firstName }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Last Name:</p>
+      <p>{{ customer.lastName }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Address:</p>
+      <p>{{ customer.address }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">City:</p>
+      <p>{{ customer.city }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Province:</p>
+      <p>{{ customer.province }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Country:</p>
+      <p>{{ customer.country }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Postal Code:</p>
+      <p>{{ customer.postalCode }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Phone Number:</p>
+      <p>{{ customer.phoneNumber }}</p>
+    </div>
+    <div style="display: flex">
+      <p style="font-weight: bold">Email:</p>
+      <p>{{ customer.email }}</p>
+    </div>
+  </div>
+
+  <br />
+  Valid: {{ firstName.valid }}
+  <br />
+  Pristine: {{ firstName.pristine }}
+  <br />
+  Touched: {{ firstName.touched }}
 </form>

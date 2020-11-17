@@ -7,17 +7,27 @@ import { Component, OnInit } from '@angular/core';
 export class StarterTemplateFormComponent implements OnInit {
     customer: any;
     message: string;
+    submitted: Boolean;
 
     constructor() { }
 
     ngOnInit() { 
         this.customer = {
-            firstName: 'Fred Template'
+            firstName: 'Fred Template',
+            lastName:'',
+            address:'',
+            city:'',
+            province:'',
+            country:'',
+            postalCode:'',
+            phoneNumber:'',
+            email: ''
         };
+        this.submitted = false;
     }
 
     onSubmit() {
-        this.message = 'You typed: ' + this.customer.firstName;
+        this.submitted = true;
     }
 
 }
